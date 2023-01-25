@@ -15,19 +15,19 @@
 char	*ft_strnstr(char *str, char *to_find, size_t len)
 {
 	char	*p;	
-	int		i;
-	int		j;
-	int		k;
+	size_t	i;
+	size_t	j;
+	size_t	k;
 
 	i = 0;
 	j = 0;
 	if (!*to_find)
 		return (str);
-	while (str[i] && i < (int)len)
+	while (str[i] && i < len)
 	{
 		p = str + i;
 		k = i;
-		while (str[k] == to_find[j] && j + i < (int)len)
+		while (str[k] == to_find[j] && j + i < len)
 		{
 			k++;
 			j++;
@@ -37,5 +37,5 @@ char	*ft_strnstr(char *str, char *to_find, size_t len)
 	j = 0;
 	i++;
 	}
-	return (0);
+	return (NULL);
 }

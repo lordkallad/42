@@ -50,9 +50,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!finals)
 		return (NULL);
 	finals[i] = 0;
-	while (i-- >= 0)
+	i--;
+	while (i >= 0)
 	{
 		finals[i] = str[i];
+		i--;
 	}
 	return (finals);
 }

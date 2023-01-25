@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	in_set(char c, const char *set)
+static int	in_set(char c, const char *set)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ int	in_set(char c, const char *set)
 	return (0);
 }
 
-char	*strstart(char *s, const char *set)
+static char	*strstart(char *s, const char *set)
 {
 	int	i;
 

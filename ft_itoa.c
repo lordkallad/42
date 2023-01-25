@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	numlen(int i)
+static int	numlen(int i)
 {
 	int	len;
 
@@ -25,7 +25,7 @@ int	numlen(int i)
 	return (len);
 }
 
-void	filltab(char *tab, int n, int size, int neg)
+static void	filltab(char *tab, int n, int size, int neg)
 {
 	if (neg)
 		tab[0] = '-';
@@ -46,7 +46,7 @@ char	*ft_itoa(int n)
 
 	if (n == -2147483648)
 	{
-		fnum = malloc(sizeof(char) * 13);
+		fnum = malloc(sizeof(char) * 12);
 		if (!fnum)
 			return (0);
 		filltab(fnum, 2147483647, 11, 1);

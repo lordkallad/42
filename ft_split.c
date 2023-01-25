@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	count_w(char *s, char c)
+static int	count_w(char *s, char c)
 {
 	int	i;
 	int	count;
@@ -35,7 +35,7 @@ int	count_w(char *s, char c)
 	return (count);
 }
 
-size_t	get_wend(char *s, char c)
+static size_t	get_wend(char *s, char c)
 {
 	size_t	len;
 
@@ -47,7 +47,7 @@ size_t	get_wend(char *s, char c)
 	return (len);
 }
 
-int	fill_tab(char **tab, char *s, char c)
+static int	fill_tab(char **tab, char *s, char c)
 {
 	int	i;
 
